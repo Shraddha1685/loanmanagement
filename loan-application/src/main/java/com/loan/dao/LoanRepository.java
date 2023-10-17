@@ -14,8 +14,5 @@ import com.loan.models.Loan;
 public interface LoanRepository extends PagingAndSortingRepository<Loan, Integer> {
 	List<Loan> findByCustomerId(int id);
 	
-	/* shraddha
-	@Query("select l from Loan l where l.id=?1")
-	//Customer findByCustomerId(int custId);
-	List<Loan> findByCustomerId(int custId); */
+	
 }

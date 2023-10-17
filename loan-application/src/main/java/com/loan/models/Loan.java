@@ -35,10 +35,7 @@ public class Loan implements Serializable {
 	@JoinColumn(name = "id", nullable = false)
 	private Customer customer;
 
-	/* shraddha
-	@OneToMany(mappedBy = "loan", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<Transaction> transactions = new ArrayList<Transaction>();
-	*/
+	
 	
 	public Loan() {
 
@@ -94,21 +91,7 @@ public class Loan implements Serializable {
 	}
 	
 	
-	/* shraddha
-	@Autowired
-	public List<Transaction> getTransactions() {
-		return transactions;
-	}
-	@Autowired
-	public void setTransactions(List<Transaction> transactions) {
-		this.transactions = transactions;
-	}
-
-	public void addTransaction(Transaction transation) {
-		transation.setLoan(this); //shraddha
-		//this.getTransactions().add(transation);
-	}
-	*/
+	
 	@Override
 	public String toString() {
 		return "Loan [loanId=" + loanId + ", loanAmt=" + loanAmt + ", loanType=" + loanType + ", duration=" + duration

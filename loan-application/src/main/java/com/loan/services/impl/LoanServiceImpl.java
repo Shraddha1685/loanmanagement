@@ -34,7 +34,7 @@ public class LoanServiceImpl implements iLoanService {
 		System.out.println("customerId "+customerId);
 		Customer customer = customerDao.findById(customerId)
 				.orElseThrow(() -> new CustomerNotFoundException("Cusotmer Not Found: " + customerId));
-		//customer.addLoan(loan); //shraddha
+		
 		System.out.println("before loan "+loan);
 		loan.setCustomer(customer);
 		System.out.println("after loan "+loan);
@@ -53,7 +53,7 @@ public class LoanServiceImpl implements iLoanService {
 				.orElseThrow(() -> new CustomerNotFoundException("Customer Not Found: " + customerId));
 		    List<Loan> loans = loanDao.findByCustomerId(customerId);//shraddha
 		    return loans;//shraddha
-			//return customer.getLoans();	
+			
 	}
 
 	@Override

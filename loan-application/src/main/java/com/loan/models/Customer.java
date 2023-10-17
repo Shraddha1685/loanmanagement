@@ -36,8 +36,6 @@ public class Customer implements Serializable {
 
 	
 	
-	//@OneToMany(mappedBy = "customer",  fetch = FetchType.LAZY, cascade = CascadeType.ALL)//shraddha
-	//private List<Loan> loans = new ArrayList<Loan>(); //shraddha
 	
 	
 	public Customer() {

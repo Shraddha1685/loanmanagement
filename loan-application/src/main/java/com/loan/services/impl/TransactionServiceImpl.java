@@ -42,7 +42,7 @@ public class TransactionServiceImpl implements iTransactionService {
 		int loanId = transaction.getLoan().getLoanId();
 		System.out.println("loanId - "+loanId);
 		Loan loan = loanDao.findById(loanId).orElseThrow(() -> new LoanNotFoundException("Loan Not Found: " + loanId));
-		//loan.addTransaction(transaction); shraddha
+		
 		transaction.setLoan(loan);
 		try {
 			return transactionDao.save(transaction);
